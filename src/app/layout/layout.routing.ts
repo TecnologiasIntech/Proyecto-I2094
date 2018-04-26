@@ -1,11 +1,14 @@
 import { Routes, RouterModule } from '@angular/router';
 import { LayoutComponent } from './layout.component';
-import {HomeComponent} from '../pages/home/home.component';
+import {ScheduleComponent} from './pages/schedule/schedule.component';
 
 const LAYOUT_ROUTES: Routes = [
     { path: '', component: LayoutComponent, children: [
-        { path: '', redirectTo: 'home', pathMatch: 'full' },
-        { path: 'home', component: HomeComponent }
+        { path: '', redirectTo: 'agenda', pathMatch: 'full' },
+        { path: 'agenda', component: ScheduleComponent },
+        { path: 'clientes', component: ScheduleComponent },
+        { path: 'servicios', component: ScheduleComponent },
+        { path: 'turnos', component: ScheduleComponent }
     ]}
 ];
 

@@ -22,11 +22,11 @@ import {AngularFireModule} from 'angularfire2';
 import {environment} from '../../environments/environment';
 import {AngularFireDatabaseModule} from 'angularfire2/database';
 import {AlertService} from '../services/alert.service';
-import {ValidationService} from '../services/validation.service';
 import {CountdownTimerModule} from 'ngx-countdown-timer';
 import {LimitToPipe} from '../pipes/limit-to.pipe';
 import {GrowlComponent} from '../components/growl/growl.component';
-import {HomeComponent} from '../pages/home/home.component';
+import {ValidationService} from '../services/validation.service';
+import { ScheduleComponent } from './pages/schedule/schedule.component';
 
 
 const PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
@@ -42,7 +42,7 @@ const PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
         NavigationTriggerComponent,
         LimitToPipe,
         GrowlComponent,
-        HomeComponent
+        ScheduleComponent
     ],
     providers: [
         Globals,

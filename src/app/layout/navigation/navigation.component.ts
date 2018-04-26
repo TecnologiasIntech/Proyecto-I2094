@@ -34,6 +34,8 @@ export class NavigationComponent implements OnInit {
         Charts: 'inactive',
     };
 
+
+
     // Toggle sub menu
     toggleNavigationSub(menu, event) {
         event.preventDefault();

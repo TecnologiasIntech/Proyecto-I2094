@@ -11,7 +11,6 @@ import { defineLocale } from 'ngx-bootstrap/chronos';
 import { esLocale } from 'ngx-bootstrap/locale';
 import {CountdownTimerModule} from 'ngx-countdown-timer';
 import { ToastrModule } from 'ngx-toastr';
-import { HomeComponent } from './pages/home/home.component';
 
 defineLocale('es', esLocale);
 
