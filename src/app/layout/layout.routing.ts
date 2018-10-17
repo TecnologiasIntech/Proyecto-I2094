@@ -8,6 +8,7 @@ const LAYOUT_ROUTES: Routes = [
         { path: 'agenda', component: ScheduleComponent },
         { path: 'clientes', component: ScheduleComponent },
         { path: 'servicios', component: ScheduleComponent },
+        { path: 'productos', component: ScheduleComponent },
         { path: 'turnos', component: ScheduleComponent }
     ]}
 ];

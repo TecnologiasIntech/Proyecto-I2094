@@ -20,9 +20,17 @@
 
         <ul class="navigation">
             <li routerLinkActive="navigation__active"><a [routerLink]="['/agenda']"><i class="zmdi zmdi-calendar"></i> Agenda</a></li>
-            <li routerLinkActive="navigation__active"><a [routerLink]="['/clientes']"><i class="zmdi zmdi-store"></i> Clientes</a></li>
-            <li routerLinkActive="navigation__active"><a [routerLink]="['/servicios']"><i class="zmdi zmdi-cloud-done"></i> Servicios</a></li>
+            <li routerLinkActive="navigation__active"><a [routerLink]="['/clientes']"><i class="zmdi zmdi-accounts"></i> Clientes</a></li>
             <li routerLinkActive="navigation__active"><a [routerLink]="['/turnos']"><i class="zmdi zmdi-time-interval"></i> Turnos</a></li>
+
+            <li routerLinkActive="navigation__sub--active" class="navigation__sub">
+                <a (click)="toggleNavigationSub('settings', $event)"><i class="zmdi zmdi-settings"></i> Configuraciones</a>
+
+                <ul [@toggleHeight]="navigationSubState.settings">
+                    <li routerLinkActive="navigation__active"><a [routerLink]="['/servicios']"><i class="zmdi zmdi-cloud-done"></i> Servicios</a></li>
+                    <li routerLinkActive="navigation__active"><a [routerLink]="['/productos']"><i class="zmdi zmdi-mall"></i> Productos</a></li>
+                </ul>
+            </li>
 
             <!--SUB LEVEL-->
             <!--<li routerLinkActive="navigation__sub&#45;&#45;active" class="navigation__sub">-->

@@ -27,6 +27,7 @@ import {LimitToPipe} from '../pipes/limit-to.pipe';
 import {GrowlComponent} from '../components/growl/growl.component';
 import {ValidationService} from '../services/validation.service';
 import { ScheduleComponent } from './pages/schedule/schedule.component';
+import { ScheduleAppointmentComponent } from './modals/schedule-appointment/schedule-appointment.component';
 
 
 const PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
@@ -42,7 +43,8 @@ const PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
         NavigationTriggerComponent,
         LimitToPipe,
         GrowlComponent,
-        ScheduleComponent
+        ScheduleComponent,
+        ScheduleAppointmentComponent
     ],
     providers: [
         Globals,
@@ -68,6 +70,7 @@ const PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
         CountdownTimerModule,
     ],
     entryComponents: [
+        ScheduleAppointmentComponent
     ]
 })
 

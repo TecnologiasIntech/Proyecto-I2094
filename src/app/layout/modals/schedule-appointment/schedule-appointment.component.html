@@ -1,0 +1,63 @@
+<section style="height: 430px;width: 800px" class="p-20">
+
+    <div class="row">
+        <div class="col-12">
+            <h3>Agendar cita</h3>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 text-center">
+            <img src="../../../../assets/images/profile.svg" alt="Foto Perfil" style="width: 75px;">
+            <h4 class="m-t-10">Juan Ramirez <i class="zmdi zmdi-edit m-l-10"></i></h4>
+        </div>
+    </div>
+
+    <div class="row m-t-20">
+        <div class="col-12">
+            <span class="float-lef text-dark m-l-20">
+                Seleccione la fecha
+            </span>
+
+            <span class="float-right m-r-20">
+                <i class="zmdi zmdi-calendar"></i>
+                Abrir calendario
+            </span>
+        </div>
+    </div>
+
+    <div class="row m-t-10">
+        <div class="col-2 text-center" *ngFor="let date of dates" (click)="dateSelected = date.dayNumber">
+
+            <div class="date {{ dateSelected == date.dayNumber ? 'date-selected': ''}}">
+                <p class="m-b-0" style="margin-top: 0.5rem;">{{ date.dayText }}</p>
+                <h1>{{ date.dayNumber }}</h1>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row m-t-20">
+        <div class="col-12">
+            <span class="float-lef text-dark m-l-20">
+                Seleccione la hora
+            </span>
+        </div>
+    </div>
+
+    <div class="row m-t-10">
+        <div class="col-2 text-center p-r-0" *ngFor="let hour of hours" (click)="hourSelected = hour.hourRange">
+            <div class="date {{ hourSelected == hour.hourRange ? 'date-selected': ''}}">
+                <h4 style="margin-top: 0.5rem;">{{ hour.hourRange }}</h4>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section>
+    <div class="float-right">
+        <button class="btn btn-outline-danger btn-lg button-schedule m-r-10">Cancelar</button>
+        <button class="btn btn-primary btn-lg button-schedule">Agendar</button>
+    </div>
+</section>
